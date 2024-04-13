@@ -3,19 +3,60 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:laba5_wpff.View"
+        xmlns:local="clr-namespace:laba5_wpff.View" xmlns:viewmodel="clr-namespace:laba5_wpff.ViewModel" d:DataContext="{d:DesignInstance Type=viewmodel:ClickerViewModel}"
         mc:Ignorable="d"
         Title="Clicker" Height="400" Width="420" Background="#FF9899F4" Icon="tanos.png">
     <Grid>
-        <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
-            <TextBlock Text="Таймер: " FontSize="16" FontFamily="Arial Black"/>
-            <TextBlock Text="{Binding Seconds}" FontSize="16"/>
-            <TextBlock Text="Клики: " FontSize="16" FontFamily="Arial Black"/>
-            <TextBlock Text="{Binding Clicks}" FontSize="16"/>
-            <TextBlock Text="Клики в минуту: " FontSize="16" FontFamily="Arial Black"/>
-            <TextBlock Text="{Binding ClicksPerMinute}" FontSize="16"/>
-            <Button Content="click" Command="{Binding ClickCommand}" FontSize="16" Margin="10" IsEnabled="{Binding ClickCommandEnabled}" FontFamily="Arial Black" Background="#FFCB70F8"/>
-            <Button Content="выход" FontSize="16" Margin="10" FontFamily="Arial Black" Background="#FFCB70F8" Click="Button_Click"/>
-        </StackPanel>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+
+
+        <Grid Grid.Row="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            
+            
+            <TextBlock Text="Таймер: " Grid.Column="0"  Grid.Row="1" FontSize="16" FontFamily="Arial Black" VerticalAlignment="Center"/>
+            <TextBlock Text="{Binding Seconds}" FontSize="16" Grid.Column="1" VerticalAlignment="Center"  HorizontalAlignment="Center"/>
+            
+        </Grid>
+
+
+        <Grid Grid.Row="2">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            
+        <TextBlock Text="Клики: " Grid.Row="2" Grid.Column="0"  FontSize="16" FontFamily="Arial Black" VerticalAlignment="Center"/>
+            <TextBlock Text="{Binding Clicks}" FontSize="16" Grid.Column="1" VerticalAlignment="Center"  HorizontalAlignment="Center"/>
+            
+        </Grid>
+
+
+        <Grid Grid.Row="3">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+
+        <TextBlock Text="Клики в минуту: "  Grid.Column="0" Grid.Row="3" FontSize="16" FontFamily="Arial Black" VerticalAlignment="Center"/>
+            <TextBlock Text="{Binding ClicksPerMinute}" FontSize="16" Grid.Column="1" VerticalAlignment="Center"  HorizontalAlignment="Center"/>
+
+        </Grid>
+            <Button Content="click"  Grid.Row="4" Command="{Binding ClickCommand}" FontSize="16" Margin="10" IsEnabled="{Binding ClickCommandEnabled}" FontFamily="Arial Black" Background="#FFCB70F8" BorderBrush="Black"/>
+            <Button Content="выход" Grid.Row="6" FontSize="16" Margin="10" FontFamily="Arial Black" Background="#FFE96363" Click="Button_Click" BorderBrush="Black"/>
+
+        <Button Content="новая игра"  Grid.Row="5" Command="{Binding ClearCommand}" FontSize="16" Margin="10"  FontFamily="Arial Black" Background="#FF863DCA" BorderBrush="Black"/>
+
     </Grid>
 </Window>

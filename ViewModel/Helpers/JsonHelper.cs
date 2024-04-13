@@ -14,9 +14,11 @@ namespace laba5_wpff.ViewModel.Helpers
 
         public static void Serialize<T>(T data)
         {
-
             string json = JsonConvert.SerializeObject(data);
-            File.WriteAllText(filePath, json);
+            using (StreamWriter sw = File.AppendText(filePath))
+            {
+                sw.WriteLine(json);
+            }
         }
 
         public static T Deserialize<T>()

@@ -29,7 +29,7 @@ namespace laba5_wpff.View
 
 
             MinHeight = 340;
-            MinWidth = 300;
+            MinWidth = 310;
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)

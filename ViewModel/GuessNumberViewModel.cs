@@ -27,12 +27,10 @@ namespace laba5_wpff.ViewModel
            
         }
 
-
-
-
-
         public ICommand CheckCommand { get; set; }
         public ICommand NewGameCommand { get; }
+
+   
 
         public GuessNumberViewModel()
         {

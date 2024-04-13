@@ -28,7 +28,7 @@ namespace laba5_wpff
 
         }
 
-        // переход на окно с кликером
+        //переход на окно с кликером
         private void Button_Click(object sender, RoutedEventArgs e)
         {
             Clicker clicker = new Clicker();

@@ -9,10 +9,10 @@ namespace laba5_wpff.Model
     internal class CLKRmodel
     {
 
-      
-         public int Clicks { get; set; }
-         public int Seconds { get; set; }
-         public int ClicksPerMinute => Clicks * 60 / Seconds;
-        
+        public int Clicks { get; set; }
+        public int Seconds { get; set; }
+
+        public int ClicksPerMinute => Clicks * 60 / Seconds;
+
     }
 }
