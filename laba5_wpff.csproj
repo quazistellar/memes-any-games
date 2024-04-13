@@ -61,6 +61,7 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Model\CLKRmodel.cs" />
     <Compile Include="Model\GTNmodel.cs" />
     <Compile Include="Model\RPCmodel.cs" />
     <Compile Include="ViewModel\ClickerViewModel.cs" />

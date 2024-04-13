@@ -1,4 +1,5 @@
-﻿using System;
+﻿using laba5_wpff.ViewModel;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -22,6 +23,13 @@ namespace laba5_wpff.View
         public Clicker()
         {
             InitializeComponent();
+
+            ClickerViewModel viewModel = new ClickerViewModel();
+            this.DataContext = viewModel;
+
+
+            MinHeight = 340;
+            MinWidth = 300;
         }
     }
 }

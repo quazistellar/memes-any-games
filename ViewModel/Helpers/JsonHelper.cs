@@ -10,7 +10,7 @@ namespace laba5_wpff.ViewModel.Helpers
 {
     public static class JsonHelper
     {
-        private static string filePath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.Desktop), "your_notes.json");
+        private static string filePath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.Desktop), "your_result.json");
 
         public static void Serialize<T>(T data)
         {
