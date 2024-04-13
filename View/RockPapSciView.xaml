@@ -5,8 +5,28 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:laba5_wpff.View"
         mc:Ignorable="d"
-        Title="RockPapSciView" Height="450" Width="800">
+       Title="Rock, Paper, Scissors Game" Height="350" Width="300" Background="#FFDD83ED">
     <Grid>
-        
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+
+        <StackPanel Grid.Row="0" Grid.Column="0" HorizontalAlignment="Center" VerticalAlignment="Center" Background="#FFEABEF2">
+            <TextBlock Text="Выберите свой ход:" Margin="5" FontFamily="Arial Black"/>
+            <Button Content="Камень" Command="{Binding RockCommand}" Margin="5" BorderBrush="Black" Background="#FFFFB4B4" FontFamily="Arial Black"/>
+            <Button Content="Бумага" Command="{Binding PaperCommand}" Margin="5" Background="#FFFFB4B4" BorderBrush="Black" FontFamily="Arial Black"/>
+            <Button Content="Ножницы" Command="{Binding ScissorsCommand}" Margin="5" BorderBrush="Black" Background="#FFFFB4B4" FontFamily="Arial Black"/>
+            <TextBlock Text="Выбор компьютера: " Margin="5" FontFamily="Arial Black"/>
+            <TextBlock Text="{Binding ComputerChoice}" Margin="5" FontFamily="Arial Black" FontSize="14"/>
+            <TextBlock Text="Выбор пользователя: " Margin="5" FontFamily="Arial Black"/>
+            <TextBlock Text="{Binding UserSelection}" Margin="5" FontFamily="Arial Black" FontSize="14"/>
+            <TextBlock Text="Победитель: " Margin="5" FontFamily="Arial Black"/>
+            <TextBlock Text="{Binding Winner}" Margin="5" FontFamily="Arial Black" FontSize="14"/>
+        </StackPanel>
     </Grid>
 </Window>

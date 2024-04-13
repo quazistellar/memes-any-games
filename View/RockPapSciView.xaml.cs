@@ -22,6 +22,12 @@ namespace laba5_wpff.View
         public RockPapSciView()
         {
             InitializeComponent();
+
+            MinHeight = 320;
+            MinWidth = 280;
+
+            RockPapSciViewModel viewModel = new RockPapSciViewModel();
+            this.DataContext = viewModel;
         }
     }
 }

@@ -58,10 +58,12 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Model\RPCmodel.cs" />
     <Compile Include="ViewModel\ClickerViewModel.cs" />
     <Compile Include="ViewModel\GuessNumberViewModel.cs" />
     <Compile Include="ViewModel\Helpers\BindableCommand.cs" />
     <Compile Include="ViewModel\Helpers\BindingHelper.cs" />
+    <Compile Include="ViewModel\Helpers\DelegateCommand.cs" />
     <Compile Include="ViewModel\Helpers\JsonHelper.cs" />
     <Compile Include="ViewModel\MainViewModel.cs" />
     <Compile Include="ViewModel\RockPapSciViewModel.cs" />
@@ -126,8 +128,6 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Model\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

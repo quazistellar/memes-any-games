@@ -24,6 +24,7 @@ namespace laba5_wpff
         public MainWindow()
         {
             InitializeComponent();
+
         }
 
         // переход на окно с кликером
@@ -45,6 +46,7 @@ namespace laba5_wpff
         private void Button_Click_2(object sender, RoutedEventArgs e)
         {
             RockPapSciView rockPapSci = new RockPapSciView();
+            DataContext = new RockPapSciViewModel();
             rockPapSci.ShowDialog();
         }
 
