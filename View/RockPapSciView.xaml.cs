@@ -24,10 +24,20 @@ namespace laba5_wpff.View
             InitializeComponent();
 
             MinHeight = 320;
-            MinWidth = 280;
+            MinWidth = 300;
 
             RockPapSciViewModel viewModel = new RockPapSciViewModel();
             this.DataContext = viewModel;
+        }
+
+        private void exit1_Click(object sender, RoutedEventArgs e)
+        {
+            var window = GetWindow(this);
+
+            if (window != null)
+            {
+                window.Close();
+            }
         }
     }
 }

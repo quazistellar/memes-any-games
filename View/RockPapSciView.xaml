@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:laba5_wpff.View"
         mc:Ignorable="d"
-       Title="Rock, Paper, Scissors Game" Height="350" Width="300" Background="#FFDD83ED">
+       Title="Rock, Paper, Scissors Game" Height="350" Width="300" Background="#FFDD83ED" Icon="rps1.png">
     <Grid>
 
         <Grid.ColumnDefinitions>
@@ -16,6 +16,8 @@
             <RowDefinition/>
         </Grid.RowDefinitions>
 
+        
+        
         <StackPanel Grid.Row="0" Grid.Column="0" HorizontalAlignment="Center" VerticalAlignment="Center" Background="#FFEABEF2">
             <TextBlock Text="Выберите свой ход:" Margin="5" FontFamily="Arial Black"/>
             <Button Content="Камень" Command="{Binding RockCommand}" Margin="5" BorderBrush="Black" Background="#FFFFB4B4" FontFamily="Arial Black"/>
@@ -27,6 +29,7 @@
             <TextBlock Text="{Binding UserSelection}" Margin="5" FontFamily="Arial Black" FontSize="14"/>
             <TextBlock Text="Победитель: " Margin="5" FontFamily="Arial Black"/>
             <TextBlock Text="{Binding Winner}" Margin="5" FontFamily="Arial Black" FontSize="14"/>
+            <Button x:Name="exit1" Content="выход" Margin="5" BorderBrush="Black" Background="#FFDD4545" FontFamily="Arial Black" Click="exit1_Click"/>
         </StackPanel>
     </Grid>
 </Window>
