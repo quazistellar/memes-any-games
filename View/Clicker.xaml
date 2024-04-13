@@ -5,16 +5,17 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:laba5_wpff.View"
         mc:Ignorable="d"
-        Title="Clicker" Height="450" Width="800">
+        Title="Clicker" Height="400" Width="420" Background="#FF9899F4" Icon="tanos.png">
     <Grid>
         <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
-            <TextBlock Text="Countdown Timer: " FontSize="16"/>
+            <TextBlock Text="Таймер: " FontSize="16" FontFamily="Arial Black"/>
             <TextBlock Text="{Binding Seconds}" FontSize="16"/>
-            <TextBlock Text="Clicks: " FontSize="16"/>
+            <TextBlock Text="Клики: " FontSize="16" FontFamily="Arial Black"/>
             <TextBlock Text="{Binding Clicks}" FontSize="16"/>
-            <TextBlock Text="Clicks Per Minute: " FontSize="16"/>
+            <TextBlock Text="Клики в минуту: " FontSize="16" FontFamily="Arial Black"/>
             <TextBlock Text="{Binding ClicksPerMinute}" FontSize="16"/>
-            <Button Content="Click" Command="{Binding ClickCommand}" FontSize="16" Margin="10" IsEnabled="{Binding ClickCommandEnabled}"/>
+            <Button Content="click" Command="{Binding ClickCommand}" FontSize="16" Margin="10" IsEnabled="{Binding ClickCommandEnabled}" FontFamily="Arial Black" Background="#FFCB70F8"/>
+            <Button Content="выход" FontSize="16" Margin="10" FontFamily="Arial Black" Background="#FFCB70F8" Click="Button_Click"/>
         </StackPanel>
     </Grid>
 </Window>
