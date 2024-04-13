@@ -1,4 +1,5 @@
 ﻿using laba5_wpff.View;
+using laba5_wpff.ViewModel;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -39,6 +40,7 @@ namespace laba5_wpff
         private void Button_Click_1(object sender, RoutedEventArgs e)
         {
             GuessNumber guess = new GuessNumber();
+            DataContext = new GuessNumberViewModel();
             guess.ShowDialog();
         }
 

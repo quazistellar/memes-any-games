@@ -4,9 +4,37 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:laba5_wpff.View"
+        xmlns:i="http://schemas.microsoft.com/xaml/behaviors"
+        xmlns:l="clr-namespace:laba5_wpff.ViewModel"
+        xmlns:commands="clr-namespace:System.Windows.Input;assembly=PresentationCore"
         mc:Ignorable="d"
-        Title="GuessNumber" Height="450" Width="800">
+        Title="GuessNumber" Height="350" Width="400" Background="#FFCD98FA" Icon="quesswhoo1.png">
+    <Window.DataContext>
+        <l:GuessNumberViewModel />
+    </Window.DataContext>
     <Grid>
+
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
         
+        
+            <TextBlock Text="Угадайте число от 1 до 100:" FontFamily="Arial Black" Margin="5" Grid.Row="0"/>
+            <TextBox Text="{Binding CurrentGuess, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" Margin="5" Grid.Row="1"/>
+            <Button Content="Проверить" Command="{Binding CheckCommand}" Margin="5" BorderBrush="Black" Background="#FFD93CCE" FontFamily="Arial Black" Grid.Row="2"/>
+            <TextBlock Text="{Binding Feedback}" FontFamily="Arial Black" Margin="5" Grid.Row="5"/>
+            <TextBlock Text="{Binding Attempts, StringFormat='Количество попыток: {0}'}" FontFamily="Arial Black" Margin="5" Grid.Row="6"/>
+            <TextBlock Text="{Binding TooLowMessage}" FontFamily="Arial Black" Margin="5" Grid.Row="4"/>
+            <TextBlock Text="{Binding TooHighMessage}" FontFamily="Arial Black" Margin="5" Grid.Row="4"/>
+            <Button Content="Новая игра" Command="{Binding NewGameCommand}" Margin="5" BorderBrush="Black" Background="#FFCC2B8F" FontFamily="Arial Black" Grid.Row="7"/>
+        <Button Content="Выход" Grid.Row="9" Margin="5" BorderBrush="Black" Background="#FFF36767" FontFamily="Arial Black" Click="Button_Click"/>
     </Grid>
 </Window>

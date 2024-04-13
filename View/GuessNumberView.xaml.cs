@@ -1,4 +1,5 @@
-﻿using System;
+﻿using laba5_wpff.ViewModel;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -22,6 +23,24 @@ namespace laba5_wpff.View
         public GuessNumber()
         {
             InitializeComponent();
+
+            GuessNumberViewModel viewModel = new GuessNumberViewModel();
+            this.DataContext = viewModel;
+
+
+            MinHeight = 340;
+            MinWidth = 300;
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+
+            var window = GetWindow(this);
+
+            if (window != null)
+            {
+                window.Close();
+            }
         }
     }
 }

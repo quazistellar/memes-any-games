@@ -23,7 +23,7 @@ namespace laba5_wpff.View
         {
             InitializeComponent();
 
-            MinHeight = 320;
+            MinHeight = 340;
             MinWidth = 300;
 
             RockPapSciViewModel viewModel = new RockPapSciViewModel();

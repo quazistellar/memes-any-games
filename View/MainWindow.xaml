@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:laba5_wpff"
         mc:Ignorable="d"
-        Title="Main" Height="450" Width="400" Background="#FF8916C1">
+        Title="Choose destiny" Height="450" Width="400" Background="#FF8916C1" Icon="gamee1.png">
     <Grid>
 
         <Grid.ColumnDefinitions>
